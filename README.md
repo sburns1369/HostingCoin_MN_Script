@@ -11,7 +11,7 @@ Shameless Referral link for VPS = https://www.vultr.com/?ref=7846384 = All insta
 *********  Quick Start - Experienced Users ***************
 Copy and paste into your VPS: 
 
-bash <(curl -Ls https://raw.githubusercontent.com/sburns1369/HostingCoin_MN_Script/master/bgx.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/sburns1369/HostingCoin_MN_Script/master/TestHSTC_Manager.sh)
 
 Hit "y" to start when prompted enter masternode private key(s)
 
