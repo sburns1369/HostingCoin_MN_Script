@@ -21,7 +21,7 @@ COINDAEMON=hstcd
 COINDAEMONCLI=hstc-cli
 COINCORE=.hostingcoin
 COINCONFIG=hstc.conf
-COINHOME=/home/hstc
+COINHOME=/home/hostingcoin
 NEBootStrap=http://nullentry.com/chain/HSTC/bootstrap.rar
 ADDNODE0=66.42.113.222
 ADDNODE1=208.167.239.187
@@ -1136,7 +1136,7 @@ start_All_Nodes
 }
 ### Start - Masternode function_calculate_Masternode_Install
 function_new_masternode_install_menu(){
-  echo -e ${GREEN}" How many ${COIN3} Masternode(s) would you like to Install? [1 - 10]"${CLEAR}
+  echo -e ${GREEN}" How many ${COIN3} Masternode(s) would you like to Install? [1 - 4]"${CLEAR}
   echo -e "Press [C] to exit"
   read -p "Enter Number : " Install_Count
   case $Install_Count in
