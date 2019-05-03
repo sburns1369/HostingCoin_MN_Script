@@ -251,7 +251,7 @@ wget https://github.com/Hosting-Coin/HostingCoin/releases/download/v1.0/hstc-dae
 tar xvf hstc-daemon-linux64.tar
 sleep 3
 sudo mv /root/hstc/hstc/hstcd /root/hstc/hstc/hstc-cli /usr/local/bin
-sudo chmod 755 -R /usr/local/bin/hostingcoin*
+sudo chmod 755 -R /usr/local/bin/hstc*
 rm -rf /root/hstc
 if [ ! -f /home/hostingcoin1/.hostingcoin/hstc.conf ]; then
 echo -e "${GREEN}Configuring First HostingCoin Node${CLEAR}"

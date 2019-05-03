@@ -1181,23 +1181,23 @@ function_masternode_upgrade(){
   	read -p "Enter choice " choice
     case $choice in
       1) build_first_node ;;
-      2) bash <(curl -Ls https://raw.githubusercontent.com/sburns1369/BitcoinGenX_MN_Script/master/BitcoinGenX_2pack.sh)
+      2) bash <(curl -Ls https://raw.githubusercontent.com/sburns1369/HostingCoin_MN_Script/master/HostingCoin_2pack.sh)
       pause ;;
-      3) bash <(curl -Ls https://raw.githubusercontent.com/sburns1369/BitcoinGenX_MN_Script/master/BitcoinGenX_3pack.sh)
+      3) bash <(curl -Ls https://raw.githubusercontent.com/sburns1369/HostingCoin_MN_Script/master/HostingCoin_3pack.sh)
       pause ;;
-      4) bash <(curl -Ls https://raw.githubusercontent.com/sburns1369/BitcoinGenX_MN_Script/master/BitcoinGenX_4pack.sh)
+      4) bash <(curl -Ls https://raw.githubusercontent.com/sburns1369/HostingCoin_MN_Script/master/HostingCoin_4pack.sh)
       pause ;;
-      5) bash <(curl -Ls https://raw.githubusercontent.com/sburns1369/BitcoinGenX_MN_Script/master/BitcoinGenX_5pack.sh)
+      5) echo Will be released at a later time!
       pause ;;
-      6) bash <(curl -Ls https://raw.githubusercontent.com/sburns1369/BitcoinGenX_MN_Script/master/BitcoinGenX_6pack.sh)
+      6) echo Will be released at a later time!
       pause ;;
-      7) bash <(curl -Ls https://raw.githubusercontent.com/sburns1369/BitcoinGenX_MN_Script/master/BitcoinGenX_7pack.sh)
+      7) echo Will be released at a later time!
       pause ;;
-      8) bash <(curl -Ls https://raw.githubusercontent.com/sburns1369/BitcoinGenX_MN_Script/master/BitcoinGenX_8pack.sh)
+      8) echo Will be released at a later time!
       pause ;;
-      9) bash <(curl -Ls https://raw.githubusercontent.com/sburns1369/BitcoinGenX_MN_Script/master/BitcoinGenX_9pack.sh)
+      9) echo Will be released at a later time!
       pause ;;
-      10) bash <(curl -Ls https://raw.githubusercontent.com/sburns1369/BitcoinGenX_MN_Script/master/BitcoinGenX_10pack.sh)
+      10) echo Will be released at a later time!
       pause ;;
       b) echo -e "backing out" ;;
       B) echo -e "backing out" ;;
