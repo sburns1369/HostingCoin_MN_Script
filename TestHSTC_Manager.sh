@@ -19,7 +19,7 @@ COIN3=HSTC
 COIN3l=hstc
 COINDAEMON=hstcd
 COINDAEMONCLI=hstc-cli
-COINCORE=.hstc
+COINCORE=.hostingcoin
 COINCONFIG=hstc.conf
 COINHOME=/home/hstc
 NEBootStrap=http://nullentry.com/chain/HSTC/bootstrap.rar
@@ -994,7 +994,7 @@ echo "Downloading latest ${COIN} binaries"
 wget https://github.com/Hosting-Coin/HostingCoin/releases/download/v1.0/hstc-daemon-linux64.tar
 tar xvf hstc-daemon-linux64.tar
 sleep 3
-sudo mv /root/${COIN3l}/${COINDAEMON} /root/${COIN3l}/${COINDAEMONCLI} /usr/local/bin
+sudo mv /root/hstc/${COIN3l}/${COINDAEMON} /root/hstc/${COIN3l}/${COINDAEMONCLI} /usr/local/bin
 sudo chmod 755 -R  /usr/local/bin/${COINl}*
 rm -rf /root/${COIN3l}
 }
@@ -1164,12 +1164,12 @@ function_masternode_upgrade(){
     echo -e "2 - Masternode Two"
     echo -e "3 - Masternode Three"
     echo -e "4 - Masternode Four"
-    echo -e "5 - Masternode Five"
-    echo -e "6 - Masternode Six"
-    echo -e "7 - Masternode Seven"
-    echo -e "8 - Masternode Eight"
-    echo -e "9 - Masternode Nine"
-    echo -e "10 - Masternode Ten"
+    #echo -e "5 - Masternode Five"
+    #echo -e "6 - Masternode Six"
+    #echo -e "7 - Masternode Seven"
+    #echo -e "8 - Masternode Eight"
+    #echo -e "9 - Masternode Nine"
+    #echo -e "10 - Masternode Ten"
     echo -e "B - Back out of Menu"
     echo -e "X - Exit"
     function_read_masternode_upgrade
