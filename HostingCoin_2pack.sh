@@ -187,7 +187,7 @@ fi
 cd ~
 touch hstccheck.tmp
 ps aux | grep hostingcoin >> hstccheck.tmp
-if grep home/hostingcoin/.hstc hstccheck.tmp
+if grep home/hostingcoin/.hostingcoin hstccheck.tmp
 then
 echo Found OLD ${NC} hstc Node running
 OldNode="1"
@@ -196,7 +196,7 @@ echo No ${NC} hstc Node not running
 OldNode="0"
 fi
 until [[ $NC = 9 ]]; do
-if grep /home/hostingcoin${NC}/.hstc hstccheck.tmp
+if grep /home/hostingcoin${NC}/.hostingcoin hstccheck.tmp
 then
 echo Found ${NC} hstc Node running
 declare IPN$NC="1"
