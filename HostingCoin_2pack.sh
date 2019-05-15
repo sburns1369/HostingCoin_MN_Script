@@ -247,8 +247,8 @@ sudo mkdir /root/hstc
 fi
 cd /root/hstc
 echo "Downloading latest HostingCoin binaries"
-wget https://github.com/Hosting-Coin/HostingCoin/releases/download/v1.0/hstc-daemon-linux64.tar
-tar xvf hstc-daemon-linux64.tar
+wget https://github.com/Hosting-Coin/HostingCoin/releases/download/HostingCoin-v2.0/hostingcoin-2.0-linux-x64.tar
+tar xvf hostingcoin-2.0-linux-x64.tar
 sleep 3
 sudo mv /root/hstc/hstc/hstcd /root/hstc/hstc/hstc-cli /usr/local/bin
 sudo chmod 755 -R /usr/local/bin/hstc*
