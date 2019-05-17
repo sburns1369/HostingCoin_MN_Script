@@ -994,7 +994,7 @@ echo "Downloading latest ${COIN} binaries"
 wget https://github.com/Hosting-Coin/HostingCoin/releases/download/HostingCoin-v2.0/hostingcoin-2.0-linux-x64.tar
 tar xvf hostingcoin-2.0-linux-x64.tar
 sleep 3
-sudo mv /root/hstc/${COIN3l}/${COINDAEMON} /root/hstc/${COIN3l}/${COINDAEMONCLI} /usr/local/bin
+sudo mv /root/${COIN3l}/hostingcoin-2.0-linux-x64/${COINDAEMON} /root/${COIN3l}/hostingcoin-2.0-linux-x64/${COINDAEMONCLI} /usr/local/bin
 sudo chmod 755 -R  /usr/local/bin/${COINl}*
 rm -rf /root/${COIN3l}
 }
