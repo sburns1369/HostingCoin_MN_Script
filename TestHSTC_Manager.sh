@@ -17,10 +17,10 @@ COINl=hostingcoin
 #Coin ticket symbol
 COIN3=HSTC
 COIN3l=hstc
-COINDAEMON=hstcd
-COINDAEMONCLI=hstc-cli
+COINDAEMON=hostingcoind
+COINDAEMONCLI=hostingcoin-cli
 COINCORE=.hostingcoin
-COINCONFIG=hstc.conf
+COINCONFIG=hostingcoin.conf
 COINHOME=/home/hostingcoin
 NEBootStrap=http://nullentry.com/chain/HSTC/bootstrap.rar
 ADDNODE0=66.42.113.222

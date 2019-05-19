@@ -210,37 +210,37 @@ NC=$[$NC+1]
 done
 rm -r hstccheck.tmp
 if [[ "$OldNode" = "1" ]]; then
-hstc-cli -datadir=/home/hostingcoin/.hostingcoin stop
+hostingcoin-cli -datadir=/home/hostingcoin/.hostingcoin stop
 fi
 if [[ "$IPN1" = "1" ]]; then
-hstc-cli -datadir=/home/hostingcoin1/.hostingcoin stop
+hostingcoin-cli -datadir=/home/hostingcoin1/.hostingcoin stop
 fi
 if [[ "$IPN2" = "1" ]]; then
-hstc-cli -datadir=/home/hostingcoin2/.hostingcoin stop
+hostingcoin-cli -datadir=/home/hostingcoin2/.hostingcoin stop
 fi
 if [[ "$IPN3" = "1" ]]; then
-hstc-cli -datadir=/home/hostingcoin3/.hostingcoin stop
+hostingcoin-cli -datadir=/home/hostingcoin3/.hostingcoin stop
 fi
 if [[ "$IPN4" = "1" ]]; then
-hstc-cli -datadir=/home/hostingcoin4/.hostingcoin stop
+hostingcoin-cli -datadir=/home/hostingcoin4/.hostingcoin stop
 fi
 if [[ "$IPN5" = "1" ]]; then
-hstc-cli -datadir=/home/hostingcoin5/.hostingcoin stop
+hostingcoin-cli -datadir=/home/hostingcoin5/.hostingcoin stop
 fi
 if [[ "$IPN6" = "1" ]]; then
-hstc-cli -datadir=/home/hostingcoin6/.hostingcoin stop
+hostingcoin-cli -datadir=/home/hostingcoin6/.hostingcoin stop
 fi
 if [[ "$IPN7" = "1" ]]; then
-hstc-cli -datadir=/home/hostingcoin7/.hostingcoin stop
+hostingcoin-cli -datadir=/home/hostingcoin7/.hostingcoin stop
 fi
 if [[ "$IPN8" = "1" ]]; then
-hstc-cli -datadir=/home/hostingcoin8/.hostingcoin stop
+hostingcoin-cli -datadir=/home/hostingcoin8/.hostingcoin stop
 fi
 if [[ "$IPN9" = "1" ]]; then
-hstc-cli -datadir=/home/hostingcoin9/.hostingcoin stop
+hostingcoin-cli -datadir=/home/hostingcoin9/.hostingcoin stop
 fi
 if [[ "$IPN0" = "1" ]]; then
-hstc-cli -datadir=/home/hostingcoin0/.hostingcoin stop
+hostingcoin-cli -datadir=/home/hostingcoin0/.hostingcoin stop
 fi
 if [ ! -d /root/hstc ]; then
 sudo mkdir /root/hstc
@@ -250,7 +250,7 @@ echo "Downloading latest HostingCoin binaries"
 wget https://github.com/Hosting-Coin/HostingCoin/releases/download/HostingCoin-v2.0/hostingcoin-2.0-linux-x64.tar
 tar xvf hostingcoin-2.0-linux-x64.tar
 sleep 3
-sudo mv /root/hstc/hostingcoin-2.0-linux-x64/hstcd /root/hstc/hostingcoin-2.0-linux-x64/hstc-cli /usr/local/bin
+sudo mv /root/hstc/hostingcoin-2.0-linux-x64/hostingcoind /root/hstc/hostingcoin-2.0-linux-x64/hostingcoin-cli /usr/local/bin
 sudo chmod 755 -R /usr/local/bin/hstc*
 rm -rf /root/hstc
 if [ ! -f /home/hostingcoin1/.hostingcoin/hstc.conf ]; then
@@ -281,7 +281,7 @@ echo -e ${YELLOW}"Skipping Configuration there"${CLEAR}
 fi
 echo
 echo -e ${YELLOW}"Launching First HSTC Node"${CLEAR}
-hstcd -datadir=/home/hostingcoin1/.hostingcoin -daemon
+hostingcoind -datadir=/home/hostingcoin1/.hostingcoin -daemon
 echo
 echo -e ${YELLOW}"Looking for a Shared Masternode Service? Check out Crypto Hash Tank" ${CLEAR}
 echo -e ${YELLOW}"Support my Project, and put your loose change to work for you!" ${CLEAR}
@@ -329,13 +329,13 @@ echo -e "${YELLOW}Once complete, it will stop and copy the block chain to${CLEAR
 echo -e "${YELLOW}the other masternodes. This prevent all masternodes${CLEAR}"
 echo -e "${YELLOW}from downloading the block chain individually; taking up${CLEAR}"
 echo -e "${YELLOW}more time and resources. Current Block count will be displayed below.${CLEAR}"
-until hstc-cli -datadir=/home/hostingcoin1/.hostingcoin mnsync status | grep -m 1 'IsBlockchainSynced" : true'; do
-hstc-cli -datadir=/home/hostingcoin1/.hostingcoin getblockcount
+until hostingcoin-cli -datadir=/home/hostingcoin1/.hostingcoin mnsync status | grep -m 1 'IsBlockchainSynced" : true'; do
+hostingcoin-cli -datadir=/home/hostingcoin1/.hostingcoin getblockcount
 sleep 60
 done
 echo -e "${GREEN}Haulting and Replicating First HostingCoin Node${CLEAR}"
 
-hstc-cli -datadir=/home/hostingcoin1/.hostingcoin stop
+hostingcoin-cli -datadir=/home/hostingcoin1/.hostingcoin stop
 sleep 10
 if [[ "$MN2" -eq "0" ]]; then
 sudo cp -r /home/hostingcoin1/.hostingcoin/* /home/hostingcoin2/.hostingcoin
@@ -344,17 +344,17 @@ cp -r /home/hostingcoin2/hstc.conf /home/hostingcoin2/.hostingcoin/hstc.conf
 sleep 1
 fi
 echo -e ${YELLOW}"Launching First HSTC Node"${CLEAR}
-hstcd -datadir=/home/hostingcoin1/.hostingcoin -daemon
+hostingcoind -datadir=/home/hostingcoin1/.hostingcoin -daemon
 sleep 20
 echo -e ${YELLOW}"Launching Second HSTC Node"${CLEAR}
-hstcd -datadir=/home/hostingcoin2/.hostingcoin -daemon
+hostingcoind -datadir=/home/hostingcoin2/.hostingcoin -daemon
 sleep 20
 echo -e ${BOLD}"All ${NODESN} HSTC Nodes Launched".${CLEAR}
 echo
 
 echo -e "${GREEN}You can check the status of your HSTC Masternode with"${CLEAR}
-echo -e "${YELLOW}For mn1: \"hstc-cli -datadir=/home/hostingcoin1/.hostingcoin masternode status\""${CLEAR}
-echo -e "${YELLOW}For mn2: \"hstc-cli -datadir=/home/hostingcoin2/.hostingcoin masternode status\""${CLEAR}
+echo -e "${YELLOW}For mn1: \"hostingcoin-cli -datadir=/home/hostingcoin1/.hostingcoin masternode status\""${CLEAR}
+echo -e "${YELLOW}For mn2: \"hostingcoin-cli -datadir=/home/hostingcoin2/.hostingcoin masternode status\""${CLEAR}
 echo
 echo -e "${RED}Status 29 may take a few minutes to clear while the daemon processes the chainstate"${CLEAR}
 echo -e "${GREEN}The data below needs to be in your local masternode configuration file:${CLEAR}"
