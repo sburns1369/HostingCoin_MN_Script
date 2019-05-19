@@ -379,7 +379,7 @@ echo -e "${YELLOW}Once complete, it will stop and copy the block chain to${CLEAR
 echo -e "${YELLOW}the other masternodes. This prevent all masternodes${CLEAR}"
 echo -e "${YELLOW}from downloading the block chain individually; taking up${CLEAR}"
 echo -e "${YELLOW}more time and resources. Current Block count will be displayed below.${CLEAR}"
-until hostingcoin-cli -datadir=/home/hostingcoin1/.hostingcoin mnsync status | grep -m 1 'IsBlockchainSynced" : true'; do
+until hostingcoin-cli -datadir=/home/hostingcoin1/.hostingcoin mnsync status | grep -m 1 'IsBlockchainSynced": true'; do
 hostingcoin-cli -datadir=/home/hostingcoin1/.hostingcoin getblockcount
 sleep 60
 done
